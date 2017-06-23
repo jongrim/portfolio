@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  background-color: #fff;
+  background-image: url("../images/circle-mess.svg");
+}
+
+.jumbotron {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.softBottomBorder {
+  border-bottom: 1px solid #333333;
+}
+
+hr {
+  border-top: 1px dotted #333333;
+}
+
+#headshot {
+  width: 180px;
+  box-shadow: rgba(0, 0, 0, 0.25) 1px 2px 4px 1px;
+}
+
+.projectPicture {
+  padding-top: 10%;
+  max-width: 100%;
+}
+
+.tech-icon {
+  width: 48px;
+  padding-bottom: 8px;
+}
+
+.bottom-spacing {
+  margin-bottom: 60px;
+}
+
+.icon-container {
+  width: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+.padding-top-40 {
+  padding-top: 40px;
+}
+
+.margin-top-274 {
+  margin-top: 274px;
+}
+
+.vertical-line {
+  border-left: 1px dotted #333333;
+  margin-left: 50%;
+  height: 250px;
+  width: 1px;
+  z-index: 1;
+}
