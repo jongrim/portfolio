@@ -3,15 +3,40 @@ body {
   padding: 0;
   color: #333333;
   background-color: #fff;
-  background-image: url("../images/circle-mess.svg");
+}
+
+h1, h2, h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+}
+
+h2 {
+  font-weight: 600;
 }
 
 .jumbotron {
-  background-color: rgba(255, 255, 255, 085);
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+#summary {
+  color: #fff;
+  background-image: url('../images/random_grey_variations.png');
+}
+
+#langAndTech {
+  background-image: url("../images/circle-mess.svg");
+}
+
+#education {
+  background-image: url('../images/dark-triangles.png');
+  color: white;
 }
 
 .softBottomBorder {
   border-bottom: 1px solid #333333;
+}
+
+.white-bottom-border {
+  border-bottom: 1px solid #fff;
 }
 
 hr {
@@ -25,7 +50,9 @@ hr {
 
 .projectPicture {
   margin-top: 14.5px;
-  max-width: 100%;
+  margin-bottom: 14.5px;
+  max-width: 80%;
+  box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.25);
 }
 
 .tech-icon {
@@ -61,4 +88,8 @@ hr {
   height: 250px;
   width: 1px;
   z-index: 1;
+}
+
+.isHidden {
+  display: none;
 }
