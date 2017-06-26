@@ -3,6 +3,8 @@ body {
   padding: 0;
   color: #333333;
   background-color: #fff;
+  background-image: url("../images/circle-mess.svg");
+  background-attachment: fixed;
 }
 
 h1, h2, h3 {
@@ -14,7 +16,8 @@ h2 {
 }
 
 .jumbotron {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgb(255, 255, 255);
+  margin: 0;
 }
 
 #summary {
@@ -23,7 +26,7 @@ h2 {
 }
 
 #langAndTech {
-  background-image: url("../images/circle-mess.svg");
+  background-color: transparent;
 }
 
 #education {
