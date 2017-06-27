@@ -2,13 +2,15 @@ var App = (function() {
   var livelyImages = ['./assets/images/Lively/Lively.png', './assets/images/Lively/Lively2.jpeg'];
   var customerImages = ['./assets/images/Customer/Home.jpeg', './assets/images/Customer/Search.jpeg'];
 
-  var $customerProjectLink, $customerProjectDiv, $livelyProjectLink, $livelyProjectDiv;
+  var $customerProjectLink, $customerProjectDiv, $livelyProjectLink, $livelyProjectDiv, $wtwProjectLink, $wtwProjectDiv;
 
   function init() {
     $customerProjectLink = $('#customerProjectLink');
     $livelyProjectLink = $('#livelyProjectLink');
     $customerProjectDiv = $('#customerProjectInfo');
     $livelyProjectDiv = $('#livelyProjectInfo');
+    $wtwProjectLink = $('#wtwProjectLink');
+    $wtwProjectDiv = $('#wtwProjectInfo');
     let livelyCurrentPhoto = 0;
 
     // setInterval(function() {
@@ -45,6 +47,7 @@ var App = (function() {
 
     $customerProjectLink.on('click', toggleCustomerProject);
     $livelyProjectLink.on('click', toggleLivelyProject);
+    $wtwProjectLink.on('click', toggleWtwProject);
   }
 
   function toggleCustomerProject(evt) {
@@ -60,6 +63,14 @@ var App = (function() {
     evt.stopImmediatePropagation();
 
     $livelyProjectDiv.slideToggle();
+  }
+
+  function toggleWtwProject(evt) {
+    evt.preventDefault();
+    evt.stopPropagation();
+    evt.stopImmediatePropagation();
+
+    $wtwProjectDiv.slideToggle();
   }
 
   return {
