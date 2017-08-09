@@ -39,7 +39,7 @@
         <div class="col-xs-12">
           <h2 class="text-center">Projects</h2>
         </div>
-        <div class="col-xs-12">
+        <div class="col-xs-12 col-sm-6 col-md-4">
           <a href="#">
             <h3 class="text-center" id="livelyProjectLink">Lively Music Events</h3>
           </a>
@@ -91,21 +91,20 @@
               </div>
             </div>
           </div>
-          <img src="assets/images/Lively/Lively.png" alt="Lively" class="lively projectPicture center-block">
+          <img src="assets/images/Lively/Lively.png" alt="Lively" class="lively projectPicture center-block" id="livelyProjectPhoto">
         </div>
-        <div class="col-xs-12">
-          <a href="#" id="customerProjectLink">
-            <h3 class="text-center">Customer Management</h3>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <a href="#" id="reactWeatherProjectLink">
+            <h3 class="text-center">React Weather</h3>
           </a>
-          <div class="projectInfo isHidden" id="customerProjectInfo">
+          <div class="projectInfo isHidden" id="reactWeatherProjectInfo">
             <div class="row">
               <div class="col-xs-12">
-                <p class="lead">Part of a fictional site, the Customer Management application is designed for independent business owners
-                  who need a way to run loyalty programs. Users can quickly search for a customer using the intelligent filtering
-                  options such as the alphabet selector or the type to search feature. This project is a solo effort and
-                  I have plans to build it out into a more robust application complete with user management, database storage,
-                  and a customer view to allow customers to see their current reward status. Check out the
-                  <a href="https://github.com/jongrim/customer-loyalty-management">source code</a> or <a href="https://jongrim.github.io/customer-loyalty-management">use the live version</a>.
+                <p class="lead">React Weather uses the OpenWeatherMaps API to display forecast detail weather data for any US city you search
+                  for. The entire application is client-side and uses React and React-Router to manage application state
+                  and routing. The
+                  <a href="https://github.com/jongrim/react-open-weather">source code</a> is available on GitHub or you can
+                  <a href="http://jgrim-react-weather.netlify.com/">use the live version</a>.
                 </p>
               </div>
             </div>
@@ -113,34 +112,16 @@
               <div class="col-xs-12">
                 <h4 class="softBottomBorder">Technology Stack</h4>
                 <ul class="list-unstyled">
-                  <li>JavaScript</li>
+                  <li>React</li>
+                  <li>React-Router</li>
                   <li>CSS Flexbox</li>
-                  <li>GitHub Pages</li>
                 </ul>
               </div>
             </div>
-            <!--<div class="row">
-              <div class="col-xs-12">
-                <h4 class="softBottomBorder">Challenges Solved</h4>
-                <ul>
-                  <li>
-                    Implemented the ‘Pub Sub’ design pattern to decouple modules and allow multiple actions to occur simultaneously in response
-                    to an event.
-                  </li>
-                  <li>
-                    Designed a landing page that gave users a clear call-to-action while the application cached the user location to enable location
-                    based searching.
-                  </li>
-                  <li>
-                    Researched and documented an industry-standard git workflow to enable more efficient team collaboration.
-                  </li>
-                </ul>
-              </div>
-            </div>-->
           </div>
-          <img src="assets/images/Customer/Home.jpeg" alt="Customer Management" class="customer projectPicture center-block">
+          <img src="assets/images/React-Weather/Home.png" alt="React Weather" class="projectPicture center-block" id="reactWeatherProjectPhoto">
         </div>
-        <div class="col-xs-12">
+        <div class="col-xs-12 col-sm-6 col-md-4">
           <a href="#" id="wtwProjectLink">
             <h3 class="text-center">What's the Weather?</h3>
           </a>
@@ -176,7 +157,7 @@
               </div>
             </div>
           </div>
-          <img src="assets/images/wtw/wtw3.png" alt="WTW Screenshot" class="wtw projectPicture center-block">
+          <img src="assets/images/wtw/wtw3.png" alt="WTW Screenshot" class="wtw projectPicture center-block" id="wtwProjectPhoto">
         </div>
         <div class="col-xs-12">
           <h4 class='text-center'><small>Be sure to check out my <a href="https://github.com/jongrim">GitHub</a> profile for more projects.</small></h4>
@@ -390,6 +371,15 @@
           <h4 class="text-center">Georgia Institute of Technology <small>Oct. '17 (Anticipated)</small></h4>
         </div>
       </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="text-center">Certifications</h2>
+        </div>
+        <div class="col-xs-12">
+          <h3 class="text-center"><a href="https://www.youracclaim.com/badges/f4eb0d6a-6018-4412-8b42-59a255dc1839/public_url">Associate of (ISC)<sup>2</sup> - Certified Information Systems Security Professional</a></h3>
+          <h4 class="text-center">Issued by (ISC)<sup>2</sup> <small>Dec. '16</small></h4>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -422,6 +412,8 @@
       </div>
     </div>
   </div>
+
+  <div class="isHidden hoverShadow"></div>
 
 </body>
 

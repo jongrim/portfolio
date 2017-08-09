@@ -1,76 +1,63 @@
 var App = (function() {
-  var livelyImages = ['./assets/images/Lively/Lively.png', './assets/images/Lively/Lively2.jpeg'];
-  var customerImages = ['./assets/images/Customer/Home.jpeg', './assets/images/Customer/Search.jpeg'];
-
-  var $customerProjectLink, $customerProjectDiv, $livelyProjectLink, $livelyProjectDiv, $wtwProjectLink, $wtwProjectDiv;
+  var $reactWeatherProjectLink,
+    $reactWeatherProjectDiv,
+    $reactWeatherProjectPhoto,
+    $livelyProjectLink,
+    $livelyProjectDiv,
+    $livelyProjectPhoto,
+    $wtwProjectLink,
+    $wtwProjectDiv,
+    $wtwProjectPhoto,
+    $hoverShadowDiv;
 
   function init() {
-    $customerProjectLink = $('#customerProjectLink');
+    $reactWeatherProjectLink = $('#reactWeatherProjectLink');
+    $reactWeatherProjectDiv = $('#reactWeatherProjectInfo');
+    $reactWeatherProjectPhoto = $('#reactWeatherProjectPhoto');
     $livelyProjectLink = $('#livelyProjectLink');
-    $customerProjectDiv = $('#customerProjectInfo');
     $livelyProjectDiv = $('#livelyProjectInfo');
+    $livelyProjectPhoto = $('#livelyProjectPhoto');
     $wtwProjectLink = $('#wtwProjectLink');
     $wtwProjectDiv = $('#wtwProjectInfo');
-    let livelyCurrentPhoto = 0;
+    $wtwProjectPhoto = $('#wtwProjectPhoto');
+    $hoverShadowDiv = $('.hoverShadow');
 
-    // setInterval(function() {
-    //   let $livelyImage = $('.lively');
-    //   $livelyImage.fadeOut(600, function() {
-    //     $livelyImage.attr('src', function() {
-    //       if (livelyCurrentPhoto === livelyImages.length - 1) {
-    //         livelyCurrentPhoto = 0;
-    //       } else {
-    //         livelyCurrentPhoto++;
-    //       }
-    //       return livelyImages[livelyCurrentPhoto];
-    //     });
-    //     $livelyImage.fadeIn();
-    //   });
-    // }, 5000);
+    $reactWeatherProjectLink.on('click', evt => {
+      toggleProject(evt, $reactWeatherProjectDiv);
+    });
+    $livelyProjectLink.on('click', evt => {
+      toggleProject(evt, $livelyProjectDiv);
+    });
+    $wtwProjectLink.on('click', evt => {
+      toggleProject(evt, $wtwProjectDiv);
+    });
 
-    // let custCurrentPhoto = 0;
-
-    // setInterval(function() {
-    //   let $customerImage = $('.customer');
-    //   $customerImage.fadeOut(600, function() {
-    //     $customerImage.attr('src', function() {
-    //       if (custCurrentPhoto === customerImages.length - 1) {
-    //         custCurrentPhoto = 0;
-    //       } else {
-    //         custCurrentPhoto++;
-    //       }
-    //       return customerImages[custCurrentPhoto];
-    //     });
-    //     $customerImage.fadeIn();
-    //   });
-    // }, 5000);
-
-    $customerProjectLink.on('click', toggleCustomerProject);
-    $livelyProjectLink.on('click', toggleLivelyProject);
-    $wtwProjectLink.on('click', toggleWtwProject);
+    $('.projectPicture').each((i, elm) => {
+      bindHover(elm);
+    });
   }
 
-  function toggleCustomerProject(evt) {
+  function toggleProject(evt, div) {
     evt.preventDefault();
     evt.stopPropagation();
     evt.stopImmediatePropagation();
 
-    $customerProjectDiv.slideToggle();
-  }
-  function toggleLivelyProject(evt) {
-    evt.preventDefault();
-    evt.stopPropagation();
-    evt.stopImmediatePropagation();
-
-    $livelyProjectDiv.slideToggle();
+    div.slideToggle();
   }
 
-  function toggleWtwProject(evt) {
-    evt.preventDefault();
-    evt.stopPropagation();
-    evt.stopImmediatePropagation();
+  function setHoverShadow(evt) {
+    let div = $(this);
+    let { top, left } = div.offset();
+    let width = div.width();
+    let height = div.height();
+  }
 
-    $wtwProjectDiv.slideToggle();
+  function hideHoverShadow(evt) {
+    $hoverShadowDiv.hide();
+  }
+
+  function bindHover(elm) {
+    elm.hover(setHoverShadow);
   }
 
   return {
