@@ -8,7 +8,8 @@ var App = (function() {
     $wtwProjectLink,
     $wtwProjectDiv,
     $wtwProjectPhoto,
-    $hoverShadowDiv;
+    $hoverShadowDiv,
+    $infoList;
 
   function init() {
     $reactWeatherProjectLink = $('#reactWeatherProjectLink');
@@ -21,6 +22,9 @@ var App = (function() {
     $wtwProjectDiv = $('#wtwProjectInfo');
     $wtwProjectPhoto = $('#wtwProjectPhoto');
     $hoverShadowDiv = $('.hoverShadow');
+    $infoList = $('.infoList');
+
+    $hoverShadowDiv.mouseleave(hideHoverShadow);
 
     $reactWeatherProjectLink.on('click', evt => {
       toggleProject(evt, $reactWeatherProjectDiv);
@@ -47,17 +51,31 @@ var App = (function() {
 
   function setHoverShadow(evt) {
     let div = $(this);
+    let $hoverDiv = $(`#${div.attr('data-hover')}`);
     let { top, left } = div.offset();
-    let width = div.width();
+    let width = div.width() + 1;
     let height = div.height();
+
+    $hoverShadowDiv.css('top', top);
+    $hoverShadowDiv.css('left', left);
+    $hoverShadowDiv.css('height', `${height}px`);
+    $hoverShadowDiv.css('width', `${width}px`);
+
+    $hoverDiv.css('padding-top', `${height / 3}px`);
+
+    $hoverShadowDiv.append($hoverDiv);
+
+    $hoverShadowDiv.fadeIn(200);
   }
 
   function hideHoverShadow(evt) {
-    $hoverShadowDiv.hide();
+    $hoverShadowDiv.fadeOut(200);
+    $infoList.append($hoverShadowDiv.children()[0]);
   }
 
   function bindHover(elm) {
-    elm.hover(setHoverShadow);
+    let $elm = $(elm);
+    $elm.mouseenter(setHoverShadow);
   }
 
   return {
