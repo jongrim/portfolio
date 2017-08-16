@@ -65,11 +65,11 @@ var App = (function() {
 
     $hoverShadowDiv.append($hoverDiv);
 
-    $hoverShadowDiv.fadeIn(200);
+    $hoverShadowDiv.fadeIn(100);
   }
 
   function hideHoverShadow(evt) {
-    $hoverShadowDiv.fadeOut(200);
+    $hoverShadowDiv.fadeOut(0);
     $infoList.append($hoverShadowDiv.children()[0]);
   }
 
