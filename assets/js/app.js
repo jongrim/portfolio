@@ -8,6 +8,8 @@ var App = (function() {
     $wtwProjectLink,
     $wtwProjectDiv,
     $wtwProjectPhoto,
+    $reactStoreProjectLink,
+    $reactStoreProjectDiv,
     $hoverShadowDiv,
     $infoList;
 
@@ -21,6 +23,8 @@ var App = (function() {
     $wtwProjectLink = $('#wtwProjectLink');
     $wtwProjectDiv = $('#wtwProjectInfo');
     $wtwProjectPhoto = $('#wtwProjectPhoto');
+    $reactStoreProjectDiv = $('#storeProjectInfo');
+    $reactStoreProjectLink = $('#storeProjectLink');
     $hoverShadowDiv = $('.hoverShadow');
     $infoList = $('.infoList');
 
@@ -34,6 +38,9 @@ var App = (function() {
     });
     $wtwProjectLink.on('click', evt => {
       toggleProject(evt, $wtwProjectDiv);
+    });
+    $reactStoreProjectLink.on('click', evt => {
+      toggleProject(evt, $reactStoreProjectDiv);
     });
 
     $('.projectPicture').each((i, elm) => {

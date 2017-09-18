@@ -39,7 +39,39 @@
         <div class="col-xs-12">
           <h2 class="text-center">Projects</h2>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="col-xs-12 col-sm-6">
+          <a href="#">
+            <h3 class="text-center" id="storeProjectLink">React Store</h3>
+          </a>
+          <div class="isHidden" id="storeProjectInfo">
+            <div class="row">
+              <div class="col-xs-12">
+                <p class="lead"><a href="https://jgrim-react-store.herokuapp.com">React Store</a> is a sample e-commerce web application
+                  that's unsurprisingly built with React. The application retrieves products from a MySQL database, and then
+                  uses external APIs to load detailed product information and images. The application also has a cart feature
+                  that allows the user to add items, manipulate quantity and remove from cart, and the state of the cart
+                  is preserved as the user navigates the application. View the <a href="https://github.com/jongrim/react-store">source code</a>                  or <a href="https://jgrim-react-store.herokuapp.com">view it live</a>.
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <h4 class="softBottomBorder">Technology Stack</h4>
+                <ul class="list-unstyled">
+                  <li>React</li>
+                  <li>React-Router</li>
+                  <li>CSS Flexbox</li>
+                  <li>Node / Express</li>
+                  <li>MySQL</li>
+                  <li>Heroku</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <img src="assets/images/React-Store/table_and_cart.png" alt="Storefront" class="store projectPicture center-block" id="storeProjectPhoto"
+            data-hover="storeHover">
+        </div>
+        <div class="col-xs-12 col-sm-6">
           <a href="#">
             <h3 class="text-center" id="livelyProjectLink">Lively Music Events</h3>
           </a>
@@ -94,7 +126,7 @@
           <img src="assets/images/Lively/Lively.png" alt="Lively" class="lively projectPicture center-block" id="livelyProjectPhoto"
             data-hover="livelyHover">
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="col-xs-12 col-sm-6">
           <a href="#" id="reactWeatherProjectLink">
             <h3 class="text-center">React Weather</h3>
           </a>
@@ -123,7 +155,7 @@
           <img src="assets/images/React-Weather/Home.png" alt="React Weather" class="projectPicture center-block" id="reactWeatherProjectPhoto"
             data-hover="reactWeatherHover">
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="col-xs-12 col-sm-6">
           <a href="#" id="wtwProjectLink">
             <h3 class="text-center">What's the Weather?</h3>
           </a>
@@ -433,6 +465,22 @@
   <div class="isHidden hoverShadow"></div>
 
   <div class="infoList isHidden">
+    <div class="container-fluid hoverInfo" id="storeHover">
+      <div class="row">
+        <div class="col-xs-6">
+          <div class="text-center"><img src="./assets/images/icons/react.svg" alt="React" class="tech-icon"></div>
+        </div>
+        <div class="col-xs-6">
+          <div class="text-center"><img src="./assets/images/icons/nodejs.svg" alt="NodeJS" class="tech-icon"></div>
+        </div>
+        <div class="col-xs-6">
+          <div class="text-center"><img src="./assets/images/icons/expressjs.svg" alt="ExpressJS" class="tech-icon"></div>
+        </div>
+        <div class="col-xs-6">
+          <div class="text-center"><img src="./assets/images/icons/mysql.svg" alt="MySQL" class="tech-icon"></div>
+        </div>
+      </div>
+    </div>
     <div class="container-fluid hoverInfo" id="livelyHover">
       <div class="row">
         <div class="col-xs-6">
