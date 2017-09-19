@@ -3,14 +3,14 @@ body {
   padding: 0;
   color: #333333;
   background-color: #fff;
-  background-image: url("../images/circle-mess.svg");
+  background-image: url('../images/circle-mess.svg');
   background-attachment: fixed;
 }
 
 h1,
 h2,
 h3 {
-  font-family: "Helvetica Neue", Helvetica, Arial;
+  font-family: 'Helvetica Neue', Helvetica, Arial;
 }
 
 h2 {
@@ -70,9 +70,12 @@ hr {
 }
 
 .icon-container {
-  width: 60px;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 200px;
+  margin-bottom: 2rem;
 }
 
 .margin-top-20 {
@@ -109,4 +112,10 @@ hr {
 
 .hoverInfo {
   padding-top: 18%;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }

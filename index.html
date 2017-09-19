@@ -47,10 +47,10 @@
             <div class="row">
               <div class="col-xs-12">
                 <p class="lead"><a href="https://jgrim-react-store.herokuapp.com">React Store</a> is a sample e-commerce web application
-                  that's unsurprisingly built with React. The application retrieves products from a MySQL database, and then
-                  uses external APIs to load detailed product information and images. The application also has a cart feature
-                  that allows the user to add items, manipulate quantity and remove from cart, and the state of the cart
-                  is preserved as the user navigates the application. View the <a href="https://github.com/jongrim/react-store">source code</a>                  or <a href="https://jgrim-react-store.herokuapp.com">view it live</a>.
+                  that's unsurprisingly built with React. The application retrieves products from a Node API using Express
+                  and MySQL, and then uses external APIs to load detailed product information and images. The application
+                  also has a cart feature that allows the user to add items, manipulate quantity and remove from cart, and
+                  the state of the cart is preserved as the user navigates the application. View the <a href="https://github.com/jongrim/react-store">source code</a>                  or <a href="https://jgrim-react-store.herokuapp.com">view it live</a>.
                 </p>
               </div>
             </div>
@@ -64,6 +64,19 @@
                   <li>Node / Express</li>
                   <li>MySQL</li>
                   <li>Heroku</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <h4 class="softBottomBorder">Challenges Solved</h4>
+                <ul>
+                  <li>
+                    Managed application state by saving state at the root level and passing getter / setter methods to lower components via props.
+                  </li>
+                  <li>
+                    Created reusable interface components that accept a wrapper component to implement product specific views.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -104,7 +117,6 @@
                 </ul>
               </div>
             </div>
-
             <div class="row">
               <div class="col-xs-12">
                 <h4 class="softBottomBorder">Challenges Solved</h4>
@@ -240,100 +252,62 @@
             <div class="panel-heading">
               <h3 class="panel-title text-center">Technologies</h3>
             </div>
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-xs-6 text-center bottom-spacing">
-                  <div class="icon-container">
-                    <img src="./assets/images/icons/html5.svg" alt="HTML5" class="tech-icon">
-                    <label for="">HTML5</label>
-                  </div>
-                </div>
-                <div class="col-xs-6 text-center bottom-spacing">
-                  <div class="icon-container">
-                    <img src="./assets/images/icons/css3.svg" alt="CSS3" class="tech-icon">
-                    <label for="">CSS3</label>
-                  </div>
-                </div>
+            <div class="panel-body flex-container">
+              <div class="icon-container">
+                <img src="./assets/images/icons/bootstrap.svg" alt="Bootstrap" class="tech-icon">
+                <label for="">Bootstrap</label>
               </div>
-              <div class="row">
-                <div class="col-xs-6 text-center bottom-spacing">
-                  <div class="icon-container">
-                    <img src="./assets/images/icons/mongo.svg" alt="Mongo" class="tech-icon">
-                    <label for="">MongoDB</label>
-                  </div>
-                </div>
-                <div class="col-xs-6 text-center bottom-spacing">
-                  <div class="icon-container">
-                    <img src="./assets/images/icons/expressjs.svg" alt="ExpressJS" class="tech-icon">
-                    <label for="">ExpressJS</label>
-                  </div>
-                </div>
+              <div class="icon-container">
+                <img src="./assets/images/icons/css3.svg" alt="CSS3" class="tech-icon">
+                <label for="">CSS3</label>
               </div>
-              <div class="row">
-                <div class="col-xs-6 text-center bottom-spacing">
-                  <div class="icon-container">
-                    <img src="./assets/images/icons/nodejs.svg" alt="NodeJS" class="tech-icon">
-                    <label for="">NodeJS</label>
-                  </div>
-                </div>
-                <div class="col-xs-6 text-center bottom-spacing">
-                  <div class="icon-container">
-                    <img src="./assets/images/icons/react.svg" alt="React" class="tech-icon">
-                    <label for="">React</label>
-                  </div>
-                </div>
+              <div class="icon-container">
+                <img src="./assets/images/icons/expressjs.svg" alt="ExpressJS" class="tech-icon">
+                <label for="">ExpressJS</label>
               </div>
-              <div class="row">
-                <div class="col-xs-6 text-center bottom-spacing">
-                  <div class="icon-container">
-                    <img src="./assets/images/icons/sass.svg" alt="SASS" class="tech-icon">
-                    <label for="">Sass</label>
-                  </div>
-                </div>
-                <div class="col-xs-6 text-center bottom-spacing">
-                  <div class="icon-container">
-                    <img src="./assets/images/icons/gulp.svg" alt="Gulp" class="tech-icon">
-                    <label for="">Gulp</label>
-                  </div>
-                </div>
+              <div class="icon-container">
+                <img src="./assets/images/icons/git.svg" alt="git" class="tech-icon">
+                <label for="">Git</label>
               </div>
-              <div class="row">
-                <div class="col-xs-6 text-center bottom-spacing">
-                  <div class="icon-container">
-                    <img src="./assets/images/icons/bootstrap.svg" alt="Bootstrap" class="tech-icon">
-                    <label for="">Bootstrap</label>
-                  </div>
-                </div>
-                <div class="col-xs-6 text-center bottom-spacing">
-                  <div class="icon-container">
-                    <img src="./assets/images/icons/git.svg" alt="git" class="tech-icon">
-                    <label for="">Git</label>
-                  </div>
-                </div>
-                <div class="col-xs-6 text-center bottom-spacing">
-                  <div class="icon-container">
-                    <img src="./assets/images/icons/jquery.svg" alt="jquery" class="tech-icon">
-                    <label for="">jQuery</label>
-                  </div>
-                </div>
-                <div class="col-xs-6 text-center bottom-spacing">
-                  <div class="icon-container">
-                    <img src="./assets/images/icons/mysql.svg" alt="mysql" class="tech-icon">
-                    <label for="">MySQL</label>
-                  </div>
-                </div>
-                <div class="col-xs-6 text-center">
-                  <div class="icon-container">
-                    <img src="./assets/images/icons/unix.svg" alt="Linux" class="tech-icon">
-                    <label for="">Linux</label>
-                  </div>
-                </div>
-                <div class="col-xs-6 text-center">
-                  <div class="icon-container">
-                    <img src="./assets/images/icons/windows.svg" alt="Windows" class="tech-icon">
-                    <label for="">Windows</label>
-                  </div>
-                </div>
+              <div class="icon-container">
+                <img src="./assets/images/icons/gulp.svg" alt="Gulp" class="tech-icon">
+                <label for="">Gulp</label>
+              </div>
+              <div class="icon-container">
+                <img src="./assets/images/icons/jquery.svg" alt="jquery" class="tech-icon">
+                <label for="">jQuery</label>
+              </div>
+              <div class="icon-container">
+                <img src="./assets/images/icons/html5.svg" alt="HTML5" class="tech-icon">
+                <label for="">HTML5</label>
+              </div>
+              <div class="icon-container">
+                <img src="./assets/images/icons/unix.svg" alt="Linux" class="tech-icon">
+                <label for="">Linux</label>
+              </div>
+              <div class="icon-container">
+                <img src="./assets/images/icons/mongo.svg" alt="Mongo" class="tech-icon">
+                <label for="">MongoDB</label>
+              </div>
+              <div class="icon-container">
+                <img src="./assets/images/icons/mysql.svg" alt="mysql" class="tech-icon">
+                <label for="">MySQL</label>
+              </div>
+              <div class="icon-container">
+                <img src="./assets/images/icons/nodejs.svg" alt="NodeJS" class="tech-icon">
+                <label for="">NodeJS</label>
+              </div>
+              <div class="icon-container">
+                <img src="./assets/images/icons/react.svg" alt="React" class="tech-icon">
+                <label for="">React</label>
+              </div>
+              <div class="icon-container">
+                <img src="./assets/images/icons/sass.svg" alt="SASS" class="tech-icon">
+                <label for="">Sass</label>
+              </div>
+              <div class="icon-container">
+                <img src="./assets/images/icons/windows.svg" alt="Windows" class="tech-icon">
+                <label for="">Windows</label>
               </div>
             </div>
           </div>
@@ -341,6 +315,7 @@
       </div>
     </div>
   </div>
+
 
   <div class="jumbotron" id="work">
     <div class="container">
