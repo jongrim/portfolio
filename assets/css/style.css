@@ -61,8 +61,10 @@ hr {
 }
 
 .tech-icon {
-  width: 48px;
-  padding-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  width: 60px;
+  padding-bottom: 14px;
 }
 
 .bottom-spacing {
