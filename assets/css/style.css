@@ -112,12 +112,14 @@ hr {
   z-index: 1;
 }
 
-.hoverInfo {
+/* .hoverInfo {
   padding-top: 18%;
-}
+} */
 
 .flex-container {
+  height: 100%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
 }

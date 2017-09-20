@@ -68,8 +68,6 @@ var App = (function() {
     $hoverShadowDiv.css('height', `${height}px`);
     $hoverShadowDiv.css('width', `${width}px`);
 
-    $hoverDiv.css('padding-top', `${height / 3}px`);
-
     $hoverShadowDiv.append($hoverDiv);
 
     $hoverShadowDiv.fadeIn(100);
